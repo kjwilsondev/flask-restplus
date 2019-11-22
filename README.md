@@ -15,6 +15,13 @@
 The model package contains all database models
 The service package contains all business logic
 The controller package contains all application endpoints
+The util package contains all neccessary utilities
+
+## Run Tests
+
+```os
+python manage.py test
+```
 
 ## Update Packages
 
@@ -72,6 +79,7 @@ rmvirtualenv [name]
 - **Flask-bcrypt**
   - for hashing passwords and tokens
 - **flask-restplus**
+  - formats objects to JSON automatically
 - **Flask-Migrate**
   - SQLAlchemy database migrations
 - **pyjwt**

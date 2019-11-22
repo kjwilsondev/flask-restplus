@@ -8,6 +8,8 @@
 
 - [virtualenvwrapper](https://virtualenvwrapper.readthedocs.io/en/latest/index.html "VirtualEnvWrapper Docs")
 
+- [CRUDing for PostgreSQL](https://www.compose.com/articles/using-postgresql-through-sqlalchemy/ "PostgreSQL through SQLAlchemy")
+
 ## App Structure
 
 The model package contains all database models
@@ -20,6 +22,42 @@ Run the following command
 
 ```os
 pip freeze > requirements.txt
+```
+
+## Initiate Database Folder
+
+Initiate a migration folder using init command for alembic to perform the migrations.
+
+```os
+python manage.py db init
+python manage.py db migrate --message 'initial database migration'
+python manage.py db upgrade
+```
+
+## Virtual Env Commands
+
+Create Env
+
+```os
+mkproject [name]
+```
+
+List all Envs
+
+```os
+ls $WORKON_HOME
+```
+
+Reactivate Env
+
+```os
+workon [name]
+```
+
+Delete Env
+
+```os
+rmvirtualenv [name]
 ```
 
 ### Neccessary Packages

@@ -34,6 +34,13 @@ python manage.py db migrate --message 'initial database migration'
 python manage.py db upgrade
 ```
 
+Should have new sqlLite database
+flask_boilerplate_main.db
+generated inside main folder
+
+Each time the database model changes,
+repeat the migrate and upgrade commands
+
 ## Virtual Env Commands
 
 Create Env

@@ -89,3 +89,11 @@ rmvirtualenv [name]
   - python library for encoding JWT tokens
 - **Flask-Script**
 - **flask_testing**
+
+### DTO - Data Transfer Object
+
+Responsible for carrying data between processes
+It will be used for marshaling data for API calls
+
+The main idea is to split your app into reusable namespaces.
+A namespace module will contain models and resources declaration.

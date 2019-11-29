@@ -5,6 +5,7 @@
 from flask_restplus import Namespace, fields
 
 class UserDto:
+    # create a new namespace for user related operations
     api = Namespace('user', description='user related operations')
     user = api.model('user', {
         'email': fields.String(required=True, description='user email address'),

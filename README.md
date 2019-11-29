@@ -82,6 +82,9 @@ rmvirtualenv [name]
   - formats objects to JSON automatically
 - **Flask-Migrate**
   - SQLAlchemy database migrations
+  - Flask-Migrate exposes two classes, Migrate and MigrateCommand.
+    - Migrateclass contains all the functionality of the extension.
+    - MigrateCommand class is used when to expose database migration commands
 - **pyjwt**
   - python library for encoding JWT tokens
 - **Flask-Script**

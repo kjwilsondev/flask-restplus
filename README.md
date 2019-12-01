@@ -2,13 +2,15 @@
 
 ## Resources
 
-- [Tutorial #1](https://www.freecodecamp.org/news/how-to-use-python-and-flask-to-build-a-web-app-an-in-depth-tutorial-437dbfe9f1c6/ "Python and Flask Web App")
+- [Python and Flask Web App](https://www.freecodecamp.org/news/how-to-use-python-and-flask-to-build-a-web-app-an-in-depth-tutorial-437dbfe9f1c6/ "Free Code Camp")
 
-- [Tutorial #2](https://www.freecodecamp.org/news/structuring-a-flask-restplus-web-service-for-production-builds-c2ec676de563/#what-is-flask-restplus "Flask-RESTPlus Service")
+- [Blacklisting JWTS](https://auth0.com/blog/blacklist-json-web-token-api-keys/ "AuthO")
+
+- [Flask-RESTPlus](https://www.freecodecamp.org/news/structuring-a-flask-restplus-web-service-for-production-builds-c2ec676de563/#what-is-flask-restplus "Free Code Camp")
 
 - [virtualenvwrapper](https://virtualenvwrapper.readthedocs.io/en/latest/index.html "VirtualEnvWrapper Docs")
 
-- [CRUDing for PostgreSQL](https://www.compose.com/articles/using-postgresql-through-sqlalchemy/ "PostgreSQL through SQLAlchemy")
+- [PostgreSQL through SQLAlchemy](https://www.compose.com/articles/using-postgresql-through-sqlalchemy/ "Compose")
 
 ## App Structure
 

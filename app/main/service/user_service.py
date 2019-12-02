@@ -28,13 +28,13 @@ def save_new_user(data):
         }
         return response_object, 409
 
+# TODO: function should be limited to admins
 def get_all_users():
     return User.query.all()
 
-
+# TODO: function should be limited to admins
 def get_a_user(public_id):
     return User.query.filter_by(public_id=public_id).first()
-
 
 def save_changes(data):
     # commits the changes to database

@@ -28,3 +28,28 @@
 
 - **api.param:**
   A decorator to specify one of the expected parameters
+
+## Draft Auth Function
+
+```python
+# TODO: Require Token Function
+# f = function being decorated
+
+def token_required(f):
+    @wraps(f)
+    # Positional args then key word args
+    def decorated(*args, **kwargs):
+        token = None
+        if 'X-API-KEY' in request.headers:
+            token = request.headers['X-API-KEY']
+        if not token:
+            return {'message' : 'Token is missing'}
+        if token != 'mytoken':
+            return {'message' : 'Invalid token'}
+        print('TOKEN: {}'.format(token))
+        return f(*args, **kwargs)
+    return decorated
+
+@api.doc('list_of_registered_users', security='apiKey')
+@token_required
+```

@@ -7,24 +7,6 @@ from functools import wraps
 
 api = UserDto.api
 _user = UserDto.user
-
-# TODO: Require Token Function
-# f = function being decorated
-#
-# def token_required(f):
-#     @wraps(f)
-#     # Positional args then key word args
-#     def decorated(*args, **kwargs):
-#         token = None
-#         if 'X-API-KEY' in request.headers:
-#             token = request.headers['X-API-KEY']
-#         if not token:
-#             return {'message' : 'Token is missing'}
-#         if token != 'mytoken':
-#             return {'message' : 'Invalid token'}
-#         print('TOKEN: {}'.format(token))
-#         return f(*args, **kwargs)
-#     return decorated
     
 @api.route('/')
 class UserList(Resource):

@@ -89,6 +89,7 @@ rmvirtualenv [name]
     - MigrateCommand class is used when to expose database migration commands
 - **pyjwt**
   - python library for encoding JWT tokens
+  - MAKE SURE YOU HAVE PyJWT AND NOT jwt !!!
 - **Flask-Script**
 - **flask_testing**
 

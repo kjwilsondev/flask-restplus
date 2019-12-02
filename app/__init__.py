@@ -9,18 +9,18 @@ from .main.controller.auth_controller import api as auth_ns
 blueprint = Blueprint('api', __name__)
 
 # TODO: Authorizations
-# authorizations = {
-#     'apikey': {
-#         'type': 'apiKey',
-#         'in': 'header',
-#         'name': 'X-API-KEY'
-#     }
-# }
+authorizations = {
+    'apikey': {
+        'type': 'apiKey',
+        'in': 'header',
+        'name': 'X-API-KEY'
+    }
+}
 
 api = Api(blueprint,
           title='Credit Swag RestPlus Backend',
           version='1.0',
-          # authorizations=authorizations,
+          authorizations=authorizations,
           description='fintech for students by students'
           )
 

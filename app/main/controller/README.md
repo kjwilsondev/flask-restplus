@@ -12,7 +12,7 @@
   A decorator to route resources
 
 - **api.marshal_with:**
-  A decorator specifying the fields to use for serialization (userDto)
+  A decorator specifying the fields to use for serialization (Dto)
 
 - **api.marshal_list_with:**
   A shortcut decorator for marshal_with above withas_list = True
@@ -24,7 +24,7 @@
   A decorator to specify one of the expected responses
 
 - **api.expect:**
-  A decorator to Specify the expected input model (userDto)
+  A decorator to Specify the expected input model (Dto)
 
 - **api.param:**
   A decorator to specify one of the expected parameters

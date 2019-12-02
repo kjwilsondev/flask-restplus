@@ -41,11 +41,9 @@ def generate_token(user):
         }
         return response_object, 401
 
-# TODO: function should be limited to admins
 def get_all_users():
     return User.query.all()
 
-# TODO: function should be limited to admins
 def get_a_user(public_id):
     return User.query.filter_by(public_id=public_id).first()
 

@@ -28,7 +28,6 @@ def save_new_user(data):
         }
         return response_object, 409
 
-
 def get_all_users():
     return User.query.all()
 

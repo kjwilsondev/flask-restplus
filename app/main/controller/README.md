@@ -1,5 +1,13 @@
 # Controller
 
+## Resources
+
+[User Controller](https://www.freecodecamp.org/news/structuring-a-flask-restplus-web-service-for-production-builds-c2ec676de563/ "Free Code Camp")
+
+[Token Based Auth](https://www.youtube.com/watch?v=xF30i_A6cRw "Pretty Printed")
+
+## Terminology
+
 - **api.route:**
   A decorator to route resources
 
@@ -20,5 +28,3 @@
 
 - **api.param:**
   A decorator to specify one of the expected parameters
-
-[User Controller](https://www.freecodecamp.org/news/structuring-a-flask-restplus-web-service-for-production-builds-c2ec676de563/)

@@ -1,19 +1,14 @@
-# token imports
+from .. import db, flask_bcrypt
 import datetime
-import jwt
 from app.main.model.blacklist import BlacklistToken
 from ..config import key
-
-from .. import db, flask_bcrypt
+import jwt
 
 # User class inherits from db.Model class which declares the class as a model for sqlalchemy
 class User(db.Model):
-    """
-    User Model for storing user related details
-    """
+    """ User Model for storing user related details """
     __tablename__ = "user"
 
-    # required columns for the user table
     id = db.Column(db.Integer, primary_key=True, autoincrement=True)
     email = db.Column(db.String(255), unique=True, nullable=False)
     registered_on = db.Column(db.DateTime, nullable=False)
@@ -25,7 +20,7 @@ class User(db.Model):
     @property
     def password(self):
         raise AttributeError('password: write-only field')
-        
+
     # password.setter uses flask-bcrypt to generate a hash using the provided password.
     @password.setter
     def password(self, password):
@@ -36,9 +31,9 @@ class User(db.Model):
 
     def __repr__(self):
         return "<User '{}'>".format(self.username)
-    
+
     @staticmethod
-    def encode_auth_token(self, user_id):
+    def encode_auth_token(user_id):
         """
         Generates the Auth Token
         :return: string
@@ -57,7 +52,7 @@ class User(db.Model):
         except Exception as e:
             return e
 
-    @staticmethod  
+    @staticmethod
     def decode_auth_token(auth_token):
         """
         Decodes the auth token
@@ -76,3 +71,4 @@ class User(db.Model):
             return 'Signature expired. Please log in again.'
         except jwt.InvalidTokenError:
             return 'Invalid token. Please log in again.'
+            

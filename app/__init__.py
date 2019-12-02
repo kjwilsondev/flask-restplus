@@ -7,10 +7,20 @@ from .main.controller.user_controller import api as user_ns
 
 blueprint = Blueprint('api', __name__)
 
+# TODO: Authorizations
+# authorizations = {
+#     'apikey': {
+#         'type': 'apiKey',
+#         'in': 'header',
+#         'name': 'X-API-KEY'
+#     }
+# }
+
 api = Api(blueprint,
-          title='FLASK RESTPLUS API BOILER-PLATE WITH JWT',
+          title='Credit Swag RestPlus Backend',
           version='1.0',
-          description='a boilerplate for flask restplus web service'
+          # authorizations=authorizations,
+          description='fintech for students by students'
           )
 
 api.add_namespace(user_ns, path='/user')

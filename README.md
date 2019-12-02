@@ -1,5 +1,13 @@
 # flask-restplus
 
+## Commands
+
+`make install` : installs both system-packages and python-packages
+`make clean` : cleans up the app
+`make tests` : runs the all the tests
+`make run` : starts the application
+`make all` : performs clean-up,installation , run tests , and starts the app.
+
 ## Resources
 
 - [Python and Flask Web App](https://www.freecodecamp.org/news/how-to-use-python-and-flask-to-build-a-web-app-an-in-depth-tutorial-437dbfe9f1c6/ "Free Code Camp")
@@ -92,11 +100,3 @@ rmvirtualenv [name]
   - MAKE SURE YOU HAVE PyJWT AND NOT jwt !!!
 - **Flask-Script**
 - **flask_testing**
-
-### DTO - Data Transfer Object
-
-Responsible for carrying data between processes
-It will be used for marshaling data for API calls
-
-The main idea is to split your app into reusable namespaces.
-A namespace module will contain models and resources declaration.

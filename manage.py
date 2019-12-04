@@ -13,7 +13,10 @@ from app.main.model import blacklist
 # if none is set in the environment variable, the default dev is used
 from app.main import create_app, db
 
+from flask_cors import CORS
+
 app = create_app(os.getenv('BOILERPLATE_ENV') or 'dev')
+CORS(app)
 app.register_blueprint(blueprint)
 
 app.app_context().push()

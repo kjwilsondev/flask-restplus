@@ -1,7 +1,11 @@
 import os
+from envparse import env
+import psycopg2
 
 # uncomment the line below for postgres database url from environment variable
 # postgres_local_base = os.environ['DATABASE_URL']
+postgres_local_base = env('PRODUCTION_DATA_BASE')
+conn = psycopg2.connect(postgres_local_base, sslmode='require')
 
 basedir = os.path.abspath(os.path.dirname(__file__))
 
@@ -13,9 +17,10 @@ class Config:
 class DevelopmentConfig(Config):
     # uncomment the line below to use postgres
     # SQLALCHEMY_DATABASE_URI = postgres_local_base
+    SQLALCHEMY_DATABASE_URI = conn
     DEBUG = True
-    SQLALCHEMY_DATABASE_URI = 'sqlite:///' + os.path.join(basedir, 'flask_boilerplate_main.db')
-    SQLALCHEMY_TRACK_MODIFICATIONS = False
+    # SQLALCHEMY_DATABASE_URI = 'sqlite:///' + os.path.join(basedir, 'flask_boilerplate_main.db')
+    # SQLALCHEMY_TRACK_MODIFICATIONS = False
 
 
 class TestingConfig(Config):
@@ -30,6 +35,7 @@ class ProductionConfig(Config):
     DEBUG = False
     # uncomment the line below to use postgres
     # SQLALCHEMY_DATABASE_URI = postgres_local_base
+    SQLALCHEMY_DATABASE_URI = conn
 
 
 config_by_name = dict(

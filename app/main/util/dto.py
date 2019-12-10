@@ -10,10 +10,10 @@ class AuthDto:
 class UserDto:
     api = Namespace('user', description='user operations')
     user = api.model('user', {
-        'fname': fields.String(required=True, description='user first name')
-        'lname': fields.String(required=True, description='user last name')
+        'fname': fields.String(required=True, description='user first name'),
+        'lname': fields.String(required=True, description='user last name'),
         'email': fields.String(required=True, description='user email address'),
-        'password': fields.String(required=True, description='user password'),
+        'password': fields.String(required=True, description='user password')
         # TODO: plaid token
         # TODO: phone numbers for texting updates
     })

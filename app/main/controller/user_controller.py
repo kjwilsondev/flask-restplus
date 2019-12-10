@@ -20,6 +20,7 @@ class UserList(Resource):
 
     @api.doc('create a new user')
     @api.response(201, 'User successfully created.')
+    @api.response(404, 'Create user failed.')
     @api.expect(_user, validate=True)
     def post(self):
         """Creates a new User """

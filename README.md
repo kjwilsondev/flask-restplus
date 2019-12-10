@@ -46,9 +46,9 @@ pip freeze > requirements.txt
 Initiate a migration folder using init command for alembic to perform the migrations.
 
 ```os
-python manage.py db init
-python manage.py db migrate --message 'initial database migration'
-python manage.py db upgrade
+python3 manage.py db init
+python3 manage.py db migrate --message 'initial database migration'
+python3 manage.py db upgrade
 ```
 
 Should have new sqlLite database

@@ -100,3 +100,7 @@ rmvirtualenv [name]
   - MAKE SURE YOU HAVE PyJWT AND NOT jwt !!!
 - **Flask-Script**
 - **flask_testing**
+
+### Git Branching
+
+<https://stackoverflow.com/questions/2862590/how-to-replace-master-branch-in-git-entirely-from-another-branch>
